@@ -74,7 +74,7 @@ const App = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center', marginTop: "0px" }}>Commodity Price Analysis</h1>
+      <h1 style={{ textAlign: 'center', marginTop: "0px" }}>Commodity Price analysis</h1>
       <Modal onSubmit={handleNewPrice} />
       <select
         style={{ height: "30px", marginTop: "0px", marginLeft: "28px", borderRadius: "7px" }}
