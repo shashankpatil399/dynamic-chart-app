@@ -38,7 +38,7 @@ const App = () => {
   // Fetch prices from the API with error handling
   const fetchPrices = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/get-prices`, {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/get-prices`, {
         params: { filter },
       });
       setPrices(response.data);
@@ -51,7 +51,7 @@ const App = () => {
   // Handle new price submission with error handling
   const handleNewPrice = async (price) => {
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/add-price`, { price });
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/add-price`, { price });
       fetchPrices(); // Refresh prices after adding a new one
     } catch (error) {
       console.error('Error adding new price:', error);
